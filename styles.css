@@ -1,0 +1,262 @@
+:root{
+  --white: #ffffff;
+  --blue: #0b6ef6;
+  --blue-600: #0556c8;
+  --muted: #546e7a;
+  --card: #f6fbff;
+  --radius: 10px;
+  --max-width: 1100px;
+  --pad: 24px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--white);color:#0b1b2b}
+a{color:var(--blue)}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:var(--pad)}
+
+/* header */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  position:relative;
+  z-index:50;
+}
+.brand{
+  display:flex;
+  align-items:center; /* fixed typo: was align-items:A */
+  gap:12px;
+}
+.logo{
+  width:54px;
+  height:54px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--blue),var(--blue-600));
+}
+.brand-text .title{font-weight:800}
+.brand-text .subtitle{font-size:12px;color:var(--muted)}
+
+/* nav */
+.nav ul{
+  display:flex;
+  gap:8px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.nav li{margin:0}
+.nav a{
+  display:inline-block;
+  padding:8px 10px;
+  border-radius:8px;
+  color:var(--muted);
+  font-weight:600;
+  text-decoration:none;
+}
+.nav a:hover{color:var(--blue)}
+
+/* highlight active link (optional - will work if you add class 'active') */
+.nav a.active{color:var(--blue);background:rgba(11,110,246,0.06)}
+
+/* hero */
+.hero{display:flex;gap:24px;align-items:flex-start;margin-top:20px}
+.left{flex:1}
+.eyebrow{color:var(--blue);font-weight:700;margin-bottom:8px}
+h1{font-size:28px;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 14px}
+.cta-row{display:flex;gap:10px;align-items:center}
+.btn{background:var(--blue);color:white;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block}
+.link{color:var(--muted);font-weight:700}
+
+/* right card */
+.right{width:300px}
+.card{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(11,110,246,0.06)}
+.card .small{color:var(--muted);font-size:13px;margin-top:6px}
+
+/* sections */
+.section{margin-top:28px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.card-sm{padding:14px;border-radius:10px;border:1px solid #eef6ff;background:white}
+.card-sm h4{margin:0 0 8px}
+
+/* contact */
+.contact .flex{display:flex;gap:16px;flex-wrap:wrap}
+.contact input,.contact textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #eef6ff;margin-top:8px}
+
+/* footer */
+.footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px;padding-top:16px;border-top:1px solid #eef6ff;color:var(--muted)}
+.small{font-size:13px}
+
+/* -------------------------
+   CSS-only mobile menu
+   (uses a hidden checkbox with class .nav-toggle)
+   -------------------------*/
+
+/* default: hide the checkbox input visually (if present) */
+.nav-toggle{position:absolute;opacity:0;pointer-events:none;}
+
+/* hamburger label (if you add it) */
+.hamburger{
+  display:none;
+  cursor:pointer;
+  width:42px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+}
+.hamburger span{
+  display:block;
+  width:22px;
+  height:2px;
+  background:#0b1b2b;
+  margin:4px 0;
+  border-radius:2px;
+  transition:all .25s ease;
+}
+
+/* mobile styles */
+@media (max-width:900px){
+  /* hide the desktop nav */
+  .nav ul{display:none}
+
+  /* show hamburger (if present in HTML) */
+  .hamburger{display:flex}
+
+  /* create a mobile slide-in panel using the .nav element */
+  .nav{
+    position:fixed;
+    top:0;
+    right:-320px; /* hidden by default */
+    width:300px;
+    height:100vh;
+    background:var(--white);
+    padding:22px;
+    box-shadow:-8px 0 30px rgba(2,6,23,0.15);
+    transition:right .28s cubic-bezier(.2,.9,.2,1);
+    z-index:1200;
+  }
+  .nav ul{display:flex;flex-direction:column;gap:12px}
+  .nav a{padding:12px;border-radius:8px;color:var(--dark);font-weight:700}
+
+  /* when the checkbox is checked -> slide in nav (checkbox should have class nav-toggle) */
+  .nav-toggle:checked ~ .nav{
+    right:0;
+  }
+
+  /* animate hamburger to X when open */
+  .nav-toggle:checked + .hamburger span:nth-child(1){
+    transform:translateY(6px) rotate(45deg);
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(2){
+    opacity:0;
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(3){
+    transform:translateY(-6px) rotate(-45deg);
+  }
+
+  /* optional: dim background when menu open (requires adding a sibling overlay div or using :checked pseudo tricks) */
+}
+
+/* responsive tweaks */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column}
+  .right{width:100%}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr}
+  h1{font-size:22px}
+}
+
+/* CSS-only hamburger + mobile panel (paste at end of styles.css) */
+
+/* hide checkbox visually (still accessible) */
+.nav-toggle{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+/* hamburger label */
+.hamburger{
+  display:none; /* shown only on small screens via media query */
+  cursor:pointer;
+  width:42px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+}
+.hamburger span{
+  display:block;
+  width:22px;
+  height:2px;
+  background:#0b1b2b;
+  margin:4px 0;
+  border-radius:2px;
+  transition:all .25s ease;
+}
+
+/* mobile breakpoint: hide desktop nav, show hamburger and panel */
+@media (max-width:900px){
+  /* hide the desktop horizontal nav */
+  .nav ul{display:none}
+
+  /* show hamburger */
+  .hamburger{display:flex}
+
+  /* slide-in panel using the same .nav element */
+  .nav{
+    position:fixed;
+    top:0;
+    right:-320px; /* hidden by default */
+    width:300px;
+    height:100vh;
+    background:var(--white);
+    padding:22px;
+    box-shadow:-8px 0 30px rgba(2,6,23,0.15);
+    transition:right .28s cubic-bezier(.2,.9,.2,1);
+    z-index:1200;
+  }
+
+  .nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:24px;
+  }
+
+  .nav a{
+    padding:12px;
+    border-radius:8px;
+    color:var(--dark, #0b1b2b); /* fallback */
+    font-weight:700;
+    text-decoration:none;
+  }
+
+  /* when checkbox is checked -> open panel */
+  .nav-toggle:checked ~ .nav{
+    right:0;
+  }
+
+  /* animate hamburger to X */
+  .nav-toggle:checked + .hamburger span:nth-child(1){
+    transform:translateY(6px) rotate(45deg);
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(2){
+    opacity:0;
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(3){
+    transform:translateY(-6px) rotate(-45deg);
+  }
+}
+

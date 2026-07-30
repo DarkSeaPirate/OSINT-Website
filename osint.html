@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberShield — OSINT</title>
+  <link rel="stylesheet" href="styles.css">   <!-- your main site CSS -->
+  <link rel="stylesheet" href="osint.css">    <!-- page-specific CSS below -->
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Site header (reuse your topbar) -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div class="brand-text">
+          <div class="title">CyberShield</div>
+          <div class="subtitle">Free OSINT & Cyber Awareness</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detection.html">Detection</a></li>
+          <li><a href="osint.html" class="active">OSINT</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO: centered image + title + description -->
+    <main class="osint-page">
+      <section class="osint-hero">
+        <!-- Replace the src with your image file path -->
+         <h1 class="osint-title">OSINT</h1>
+
+        <img src="osint.png" alt="OSINT illustration" class="osint-hero-img">
+
+        
+        <p class="osint-description">
+          Open Source Intelligence (OSINT) is the practice of collecting and analysing publicly available information to support investigations, threat assessments, and research. OSINT relies on lawful, ethical methods and focuses on sources such as websites, public records, social media, DNS/WHOIS, public code repositories, and archived pages.
+        </p>
+      </section>
+
+      <!-- Notes + resources -->
+      <section class="osint-notes">
+        <h2>Notes</h2>
+
+        <!-- Replace the paragraph below with your actual notes text -->
+        <article class="note-card">
+          <h3>Quick overview</h3>
+          <p>
+            These notes cover practical OSINT techniques, safe tools to use, and steps for documenting findings. Always follow legal & ethical guidelines — only collect publicly available information and never attempt unauthorized access.
+          </p>
+
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://publish.obsidian.md/addielamarr/01+Cybersecurity+Mastery" target="_blank" rel="noopener">Cyber security</a> Keeping data and users safe online.</li>
+            <li><a href="https://publish.obsidian.md/addielamarr/OSINT" target="_blank" rel="noopener">OSINT</a>Investigating using public data.</li>
+            <li><a href="https://publish.obsidian.md/addielamarr/Forensic+Reporting" target="_blank" rel="noopener">Forensic Reporting</a> Documenting digital evidence clearly.</li>
+          </ul>
+
+          <!-- PDF link: replace path with your PDF -->
+          <p class="pdf-link">
+            <strong>Download:</strong>
+            <a href="bns.pdf" target="_blank" download>IT Laws (India) — Guide for Cyber Investigations (PDF)</a>
+          </p>
+        </article>
+      </section>
+
+      <!-- Comparison section -->
+      <section class="osint-compare">
+        <h2>Cyber Investigation vs OSINT Analyst</h2>
+
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h3>Cyber Investigator</h3>
+            <ul>
+              <li><strong>Scope:</strong> Deep technical investigations (forensics, network logs, device analysis)</li>
+              <li><strong>Access:</strong> May require internal/system access, logs, or warrants (legal authority)</li>
+              <li><strong>Skills:</strong> Digital forensics, incident response, chain-of-custody, specialized tools</li>
+              <li><strong>Outcome:</strong> Evidence collection for incident response, legal proceedings, remediation</li>
+            </ul>
+          </div>
+
+          <div class="compare-card">
+            <h3>OSINT Analyst</h3>
+            <ul>
+              <li><strong>Scope:</strong> Publicly available information collection and analysis</li>
+              <li><strong>Access:</strong> Uses open sources only (web, social media, public records)</li>
+              <li><strong>Skills:</strong> Search strategies, source validation, data correlation, reporting</li>
+              <li><strong>Outcome:</strong> Intelligence reports, lead generation, risk assessments, context for investigators</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="compare-note">
+          <p><strong>Key difference:</strong> Cyber investigators often require privileged access and technical forensic methods; OSINT analysts collect and interpret information from open/public sources to support investigations or intelligence work.</p>
+        </div>
+      </section>
+
+      <!-- Footer within page -->
+      <footer class="osint-footer">
+        <p>All techniques on this page are for defensive and educational purposes only. Do not use them for illegal activity. For legal guidance, refer to the <strong>IT Laws (India)</strong> PDF above.</p>
+      </footer>
+    </main>
+
+  </div>
+</body>
+</html>

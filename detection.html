@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberShield — Domain Checker</title>
+  <link rel="stylesheet" href="styles.css">        <!-- main site CSS -->
+  <link rel="stylesheet" href="detection.css">     <!-- detection-specific CSS -->
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header (same as site header) -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div class="brand-text">
+          <div class="title">CyberShield</div>
+          <div class="subtitle">Free OSINT & Cyber Awareness</div>
+        </div>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detection.html" class="active">Detection</a></li>
+          <li><a href="osint.html">OSINT</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="btn" href="contact.html">Get Help</a>
+      </div>
+    </header>
+
+    <!-- Page header -->
+    <header class="vt-header" style="margin-top:20px">
+      <h1>🔍 Phishing Detection</h1>
+      <p class="muted">Check if a domain is safe or flagged as malicious </p>
+    </header>
+
+    <!-- Detection UI (scoped) -->
+    <main class="detection-page">
+      <div class="dt-input-box">
+        <label for="vt-domain">Enter domain or URL</label>
+        <div class="dt-row">
+          <input id="vt-domain" placeholder="example.com" autocomplete="off" />
+          <button id="vt-check" class="btn">Check</button>
+        </div>
+        <p class="muted small">Warning: Do not submit private information — domain check only.</p>
+      <div class="scan-note">
+      ⚠️ This detection tool is still a work-in-progress.  
+      If the results are not accurate, verify using:
+      <a href="https://www.virustotal.com" target="_blank">VirusTotal</a>,
+      <a href="https://urlscan.io" target="_blank">URLScan</a>,
+      or <a href="https://crt.sh" target="_blank">CRT.sh</a>.
+
+
+      <div class="scan-note">This tool provides intermediate results only.
+If you want more advanced or highly accurate reports, you can check the websites listed above.
+They usually give more detailed and reliable information.
+</div>
+    </div>
+      </div>
+         
+      <section id="vt-result" class="vt-result hidden">
+        <div class="vt-card vt-summary">
+          <div id="vt-domain-name" class="vt-domain-name"></div>
+          <div id="vt-status" class="vt-status"></div>
+          <table id="vt-stats" class="vt-stats"></table>
+        </div>
+
+        <div class="vt-card vt-details">
+          <h3>WHOIS</h3>
+          <pre id="vt-whois" class="vt-pre"></pre>
+          <details>
+            <summary>Show Raw JSON</summary>
+            <pre id="vt-raw" class="vt-pre"></pre>
+          </details>
+        </div>
+        
+      </section>
+    </main>
+
+    <footer class="footer" style="margin-top:28px">
+      <div>
+        <strong>CyberShield</strong>
+        <div class="muted small">© <span id="year"></span> CyberShield — College project. All resources free.</div>
+      </div>
+      <div class="links">
+        <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // set copyright year (keeps consistency with site)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="detection.js"></script>
+</body>
+</html>

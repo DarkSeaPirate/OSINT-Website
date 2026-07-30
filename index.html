@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberShield — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+  <div class="brand">
+    <div class="logo">CS</div>
+    <div class="brand-text">
+      <div class="title">CyberShield</div>
+      <div class="subtitle">Free OSINT & Cyber Awareness</div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </label>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detection.html">Detection</a></li>
+      <li><a href="osint.html">OSINT</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="book.html">Books</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="actions">
+    <a class="btn" href="index.html#contact">Get Help</a>
+  </div>
+</header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="left">
+          <div class="eyebrow">Learn • Detect • Stay Safe</div>
+          <h1>CyberShield — Learn to detect phishing & protect privacy</h1>
+          <p class="lead">Your simple path to cyber awareness</p>
+
+          <div class="cta-row">
+            <a class="btn" href="detection.html">Try phishing demo</a>
+            <a class="link" href="resources.html">Browse resources →</a>
+          </div>
+        </div>
+
+        <aside class="right">
+          <div class="card">
+            <strong>About this Project</strong>
+            <div class="small">CyberShield is a college cybersecurity project focused on phishing detection, OSINT awareness, and safe online practices. All tools and resources here are free and student-friendly.</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About Us</h2>
+        <p class="muted">CyberShield spreads free cyber awareness and helps people detect scams and unsafe websites. We provide simple tools, clear guides, and basic OSINT knowledge to keep everyone safe online.</p>
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick View</h2>
+        <div class="grid">
+          <div class="card-sm"><h4>Phishing Detection</h4><p class="muted">Quickly analyse any domain using smart rules to detect suspicious or unsafe websites.</p></div>
+          <div class="card-sm"><h4>OSINT</h4><p class="muted">Learn ethical OSINT techniques to analyse public information safely and responsibly.</p></div>
+          <div class="card-sm"><h4>Articles</h4><p class="muted">Short, easy-to-understand writeups explaining cybersecurity, phishing, and digital safety.</p></div>
+          <div class="card-sm"><h4>Books</h4><p class="muted">Free recommended cybersecurity books to help you build strong fundamentals.</p></div>
+          <div class="card-sm"><h4>Resources</h4><p class="muted">Downloadable PDFs, guides, checklists, and learning material — all available for free.</p></div>
+          <div class="card-sm"><h4>Contact us</h4><p class="muted">Reach out to us for doubts, help, or community support — always free.</p></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <div class="flex">
+          <div class="card-sm">
+            <strong>Founder</strong>
+            <div class="small">Vicky — Student</div>
+            <div class="small">Email: <a href="mailto:@gmail.com">adddemo@gmail.com</a></div>
+            <div class="small">Phone: 931XXXXXXX</div>
+          </div>
+
+          <div class="card-sm">
+            <strong>Message us</strong>
+
+<form action="https://formsubmit.co/codebywolf404@gmail.com" method="POST">
+
+  <!-- Optional settings -->
+  <input type="hidden" name="_subject" value="New message from CyberShield website">
+  <input type="hidden" name="_captcha" value="false">
+  <imput type="hidden" name="_next" value="thankyou.html">
+
+  <!-- If you want redirect afterwards (optional) -->
+  <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
+  <input type="text" name="name" placeholder="Your name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <div style="margin-top:8px;">
+    <button class="btn" type="submit">Send</button>
+  </div>
+</form>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>CyberShield</strong>
+        <div class="muted small">© <span id="year"></span> CyberShield — All resources free.</div>
+      </div>
+      <div class="links">
+        <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

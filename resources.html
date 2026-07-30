@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberShield — Resources</title>
+  <link rel="stylesheet" href="styles.css">   <!-- main site CSS -->
+  <link rel="stylesheet" href="resources.css"> <!-- this page CSS -->
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- site header (reuse your topbar) -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div class="brand-text">
+          <div class="title">CyberShield</div>
+          <div class="subtitle">Free OSINT & Cyber Awareness</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detection.html">Detection</a></li>
+          <li><a href="osint.html">OSINT</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="resources.html" class="active">Resources</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="resources-page">
+      <section class="resources-hero">
+        <h1>Resources</h1>
+        <p class="muted">Official guidelines, laws, and useful links for cyber investigations and OSINT. Use these authoritative sources for research and legal reference.</p>
+      </section>
+
+      <!-- Quick Tools / Links -->
+      <section class="resources-block">
+        <h2>Quick Tools & Sites</h2>
+        <p class="muted">Fast links to commonly used tools and public services (opens in new tab):</p>
+        <div class="links-grid">
+          <a class="resource-card" href="https://www.virustotal.com/gui/home/url" target="_blank" rel="noopener">
+            <div class="card-title">VirusTotal</div>
+            <div class="card-sub">Domain & file reputation</div>
+          </a>
+
+          <a class="resource-card" href="https://urlscan.io/?hl=en-US" target="_blank" rel="noopener">
+            <div class="card-title">URLScan.io</div>
+            <div class="card-sub">Website scan & screenshot</div>
+          </a>
+
+          <a class="resource-card" href="https://www.whois.com/whois/" target="_blank" rel="noopener">
+            <div class="card-title">WHOIS Lookup</div>
+            <div class="card-sub">Domain ownership information</div>
+          </a>
+
+          <a class="resource-card" href="https://crt.sh/" target="_blank" rel="noopener">
+            <div class="card-title">CRT.sh</div>
+            <div class="card-sub">Certificate transparency search</div>
+          </a>
+
+          <a class="resource-card" href="https://www.shodan.io/" target="_blank" rel="noopener">
+            <div class="card-title">Shodan</div>
+            <div class="card-sub">Internet device search</div>
+          </a>
+
+          <a class="resource-card" href="https://haveibeenpwned.com/" target="_blank" rel="noopener">
+            <div class="card-title">HaveIBeenPwned</div>
+            <div class="card-sub">Email breach check</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- IT Laws & Government Resources -->
+      <section class="resources-block">
+        <h2>IT Law & Government Resources (India)</h2>
+        <p class="muted">Official sources and legal material useful during cyber investigations. Replace placeholders below with the correct official links or upload PDFs to <code>/assets/</code> folder.</p>
+
+        <ul class="law-list">
+          <li>
+            <strong>Information Technology Act, 2000</strong>
+            <div class="desc">Complete text of the IT Act — includes provisions for cyber offences, liability, and legal procedure. <a href="bns.pdf" target="_blank" rel="noopener">Download PDF</a> </div>
+          </li>
+
+          <li>
+            <strong>CERT-In (Indian Computer Emergency Response Team)</strong>
+            <div class="desc">Official advisories, alerts, and incident reporting guidance. <a href="https://cert-in.org.in/" target="_blank" rel="noopener">CERT-In website</a></div>
+          </li>
+
+          <li>
+            <strong>National Cyber Crime Reporting Portal</strong>
+            <div class="desc">Report cybercrime complaints online (Government portal). <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener">Report a cybercrime</a></div>
+          </li>
+
+          <li>
+            <strong>Ministry of Electronics & IT (MeitY)</strong>
+            <div class="desc">Policy documents, guidelines, and official publications on cybersecurity. <a href="https://www.meity.gov.in/" target="_blank" rel="noopener">MeitY</a></div>
+          </li>
+
+          <li>
+            <strong>Cyber Regulations & Guidelines</strong>
+            <div class="desc">Links to rules, amendments, and government notifications relevant to cyber investigations. <a href="https://www.meity.gov.in/documents/act-and-policies?page=1" target="_blank" rel="noopener">View notifications</a></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Checklists -->
+      <section class="resources-block">
+        <h2>Practical Checklists</h2>
+        <p class="muted">Quick reference checklists you can use during an investigation.</p>
+
+        <div class="checklist-grid">
+          <article class="check-card">
+            <h3>Phishing Detection Checklist</h3>
+            <ul>
+              <li>Inspect sender address and headers</li>
+              <li>Hover and verify destination URLs</li>
+              <li>Check domain reputation on VirusTotal</li>
+              <li>Look for impersonation signs & urgency language</li>
+            </ul>
+          </article>
+
+          <article class="check-card">
+            <h3>OSINT Investigation Checklist</h3>
+            <ul>
+              <li>Record search queries & timestamps</li>
+              <li>Collect screenshots & URLs</li>
+              <li>Capture WHOIS & DNS records</li>
+              <li>Correlate usernames across platforms</li>
+            </ul>
+          </article>
+
+          <article class="check-card">
+            <h3>Evidence Handling</h3>
+            <ul>
+              <li>Document chain of custody</li>
+              <li>Use read-only copies where possible</li>
+              <li>Keep a log of access and actions</li>
+              <li>Store originals securely</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Resources footer / contact -->
+      <section class="resources-block">
+        <h2></h2>Legal & Support Notice
+        <p class="muted">All resources are provided strictly for educational and defensive use.
+If you need verified copies of Indian cyber laws or official government documents, contact us: <a href="mailto:vickytv14@gmail.com">vickytv14@gmail.com</a></p>
+      </section>
+
+      <footer class="resources-footer">
+        <div>
+          <strong>CyberShield</strong>
+          <div class="muted small">© <span id="year"></span> CyberShield — Resources & guides.</div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
